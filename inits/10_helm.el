@@ -24,6 +24,7 @@
 					;	 (local-set-key "\C-t\C-s" 'helm-gtags-find-symbol)
 	 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
 					;	 (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)
+	 (local-set-key (kbd "C-z") 'helm-gtags-pop-stack)
 					; 前のバッファへ
 	 (local-set-key "\C-t\C-p" 'helm-gtags-previous-history)
 					; 次のバッファへ
@@ -34,6 +35,8 @@
 
 (add-hook 'c-mode-hook 'helm-gtags-mode)
 
+; window最小化が勝つので、globalで設定してしまう.
+(global-set-key (kbd "C-z") 'helm-gtags-pop-stack)
 
 ; ripgrepをhelm化
 (setq helm-ag-base-command "rg --vimgrep --no-heading")
