@@ -20,3 +20,5 @@
 ;; ロードするpath
 (setq load-path (cons "../manual_install/" load-path))
 
+
+
