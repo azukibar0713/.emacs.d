@@ -68,3 +68,28 @@
 ;(migemo-init)
 
 
+;;; --------------------------------------------------------------------------------
+;;; company
+;;; --------------------------------------------------------------------------------
+(require 'company)
+(global-company-mode) ; 全バッファで有効にする
+(setq company-idle-delay 0) ; デフォルトは0.5
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+; 特定のmodeだけでcompany-modeを有効にしたいときは，(global-company-mode)を消して
+;(add-hook 'python-mode-hook 'company-mode)
+
+; M-n 次の候補選択
+; M-p 前の候補選択
+; C-g 候補選択中止
+; RET 候補選択
+; F1, C-h docを別バッファに表示
+; C-w 定義場所を表示
+; C-s 候補検索
+; C-M-s 候補フィルタリング
+; [tab] 共通するprefixを挿入
+(define-key company-active-map (kbd "M-n") nil)
+(define-key company-active-map (kbd "M-p") nil)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-active-map (kbd "C-h") nil)
