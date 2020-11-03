@@ -18,6 +18,12 @@ C-M-a   beginning-of-defun      関数の前に行く
 C-M-e   end-of-defun    関数の後ろに行く
 C-M-h   mark-defun      関数を選択する
 
+-------------
+grep
+-------------
+https://rgel.readthedocs.io/en/2.0.1/usage.html#full-command-line-search
+rg : ファイルタイプ指定のripgrep
+rg-menu : rgの検索コマンドバッファで、rg-menuからsでsaveするとバッファがセーブされる.
 
 -------------
 ファイル内

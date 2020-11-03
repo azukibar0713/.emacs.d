@@ -1,6 +1,12 @@
 (require 'helm-config)
 (helm-mode 1)
 
+;;; 現在のシンボルをデフォルトのクエリにする
+(setq helm-ag-insert-at-point 'symbol)
+
+;; helm: あいまい検索有効
+(setq helm-M-x-fuzzy-match t)
+
 (define-key global-map (kbd "C-]") 'helm-mini)
 (define-key global-map (kbd "M-x")     'helm-M-x)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
@@ -56,4 +62,5 @@
 (require 'helm-ls-git)
 (key-chord-define-global "ls" 'helm-ls-git-ls)
 
+(key-chord-define-global "hs" 'helm-swoop)
 
