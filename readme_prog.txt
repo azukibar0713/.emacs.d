@@ -8,6 +8,8 @@ C-c l : 改行折り返しOff/On切り替え
 -------------
 移動
 -------------
+C-x m : ctrl-spaceでマークしたバッファの場所を表示
+
 C-M-f   forward-sexp    閉じカッコの前に行く
 C-M-b   backward-sexp   閉じカッコの後ろに行く
 C-M-k   kill-sexp       閉じカッコ内を削除する

@@ -37,6 +37,7 @@
 
 ; window最小化が勝つので、globalで設定してしまう.
 (global-set-key (kbd "C-z") 'helm-gtags-pop-stack)
+(global-set-key (kbd "C-x m") 'helm-all-mark-rings)  ; ctrl+spaceでマークを付けた場所にジャンプできる.
 
 ; ripgrepをhelm化
 (setq helm-ag-base-command "rg --vimgrep --no-heading")
