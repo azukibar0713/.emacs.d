@@ -1,43 +1,46 @@
-�v���O���~���O����Ƃ��̑���o��
+プログラミングするときの操作覚書
 
 -------------
-�\��
+表示
 -------------
-C-c l : ���s�܂�Ԃ�Off/On�؂�ւ�
+C-c l : 改行折り返しOff/On切り替え
 
 -------------
-�ړ�
+移動
 -------------
-C-x m : ctrl-space�Ń}�[�N�����o�b�t�@�̏ꏊ��\��
+C-x m : ctrl-spaceでマークしたバッファの場所を表示
 
-C-M-f   forward-sexp    ���J�b�R�̑O�ɍs��
-C-M-b   backward-sexp   ���J�b�R�̌��ɍs��
-C-M-k   kill-sexp       ���J�b�R�����폜����
-C-M-,C-M-@      mark-sexp       ���J�b�R����I������
-C-M-a   beginning-of-defun      �֐��̑O�ɍs��
-C-M-e   end-of-defun    �֐��̌��ɍs��
-C-M-h   mark-defun      �֐���I������
+C-M-f   forward-sexp    閉じカッコの前に行く
+C-M-b   backward-sexp   閉じカッコの後ろに行く
+C-M-k   kill-sexp       閉じカッコ内を削除する
+C-M-,C-M-@      mark-sexp       閉じカッコ内を選択する
+C-M-a   beginning-of-defun      関数の前に行く
+C-M-e   end-of-defun    関数の後ろに行く
+C-M-h   mark-defun      関数を選択する
 
 -------------
-grep
+rg
 -------------
 https://rgel.readthedocs.io/en/2.0.1/usage.html#full-command-line-search
-rg : �t�@�C���^�C�v�w���ripgrep
-rg-menu : rg�̌����R�}���h�o�b�t�@�ŁArg-menu����s��save����ƃo�b�t�@���Z�[�u�����.
+rg : ファイルタイプ指定のripgrep
+バッファのsave
+  rg-menu : rgの検索コマンドバッファで、rg-menuからsでsaveするとバッファがセーブされる.
+ファイルのフィルター
+  rg-menuから-gでglobのオプションを*.{c.h}のように指定すると.c, .hファイルが検索される
 
 -------------
-�t�@�C����
+ファイル内
 -------------
-helm-occur : �t�@�C�����ōi�荞��Ō���
+helm-occur : ファイル内で絞り込んで検索
 
 -------------
-�f�B���N�g���P��
+ディレクトリ単位
 -------------
-helm-ag : ���̃f�B���N�g���ȉ�������. 10_helm.el��ripgrep���g���ݒ�ɂ��Ă���.
+helm-ag : 今のディレクトリ以下を検索. 10_helm.elでripgrepを使う設定にしている.
 
 -------------
-�t�@�C������
+ファイル検索
 -------------
-l, s�������� : helm-ls-git-ls  git�ŊǗ�����Ă���t�@�C����helm. l, s���������ɃA�T�C��
+l, s同時押し : helm-ls-git-ls  gitで管理されているファイルのhelm. l, s同時押しにアサイン
 
 
