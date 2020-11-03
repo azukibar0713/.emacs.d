@@ -20,5 +20,13 @@
 ;; ロードするpath
 (setq load-path (cons "../manual_install/" load-path))
 
-
-
+;;; --------------------------------------------------------------------------------
+;;; キーボード同時押しコマンド
+;;; --------------------------------------------------------------------------------
+(require 'key-chord)
+(setq key-chord-two-keys-delay 0.04)
+(key-chord-mode 1)
+;; グローバルマップへの設定例 ex.jk同時押しでview-mode設定
+;(key-chord-define-global "jk" 'view-mode)
+;; メジャーモードへの設定例
+;(key-chord-define emacs-lisp-mode-map "df" 'describe-function)

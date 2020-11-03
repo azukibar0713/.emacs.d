@@ -53,3 +53,7 @@
 (global-set-key (kbd "C-M-g") 'helm-ag)
 (global-set-key (kbd "C-M-k") 'backward-kill-sexp) ;推奨
 
+(require 'helm-ls-git)
+(key-chord-define-global "ls" 'helm-ls-git-ls)
+
+
