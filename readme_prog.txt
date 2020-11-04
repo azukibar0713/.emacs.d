@@ -44,3 +44,5 @@ helm-ag : 今のディレクトリ以下を検索. 10_helm.elでripgrepを使う
 l, s同時押し : helm-ls-git-ls  gitで管理されているファイルのhelm. l, s同時押しにアサイン
 
 
+
+

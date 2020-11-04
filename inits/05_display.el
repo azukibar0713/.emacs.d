@@ -44,3 +44,7 @@
       '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
 
 (global-whitespace-mode 1)
+
+;;; P90 タイトルバーにファイルのフルパスを表示
+(setq frame-title-format "%f")
+
