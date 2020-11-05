@@ -152,7 +152,7 @@
 (windmove-default-keybindings)
 
 ;;; --------------------------------------------------------------------------------
-;;; historyf.elのイメージとしては、Emacsで開いたファイルに対してブラウザの「戻る」ボタンと同じような履歴管理を実現するEmacs Lisp。
+;;; historyf.elのイメージとしては、Emacsで開いたファイルに対してブラウザの「戻る」ボタンと同じような履歴管理を実現するEmacs Lisp
 ;;; --------------------------------------------------------------------------------
 ;(require 'historyf)
 ;(global-set-key (kbd "<M-left>") 'historyf-back)
@@ -172,3 +172,10 @@
 (require 'open-junk-file)
 (setq open-junk-file-format "~/junk/%Y/%m/%Y-%m-%d-%H%M%S.")
 (global-set-key (kbd "C-x j") 'open-junk-file)
+
+
+(defun counter-other-window ()
+  (interactive)
+  (other-window -1))
+(global-set-key (kbd "C-;") 'other-window)
+(global-set-key (kbd "C-:") 'counter-other-window)
