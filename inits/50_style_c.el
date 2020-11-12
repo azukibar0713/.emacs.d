@@ -5,6 +5,7 @@
             (setq tab-width 4)
             ;; 演算式が複数行にまたがるときのオフセット
             (c-set-offset 'statement-cont 'c-lineup-math)  ;;; (c)
+            (setq indent-tabs-mode nil)     ; インデントは空白文字で行う（TABコードを空白に変換）
             ;; 行末のスペースやタブに色づけして警告する。
             (setq show-trailing-whitespace t)))            ;;; (d)
 
