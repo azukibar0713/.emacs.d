@@ -78,6 +78,7 @@
                css-mode-hook
                apples-mode-hook))
       (add-hook hook 'hs-minor-mode))))
+(key-chord-define-global "fd" 'fold-dwim-toggle)
 
 ;; -------------------------------------------------------------------------
 ;; フレームの透明度
