@@ -48,11 +48,54 @@
 ;;; P90 タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
 
-
-
 ;;; --------------------------------------------------------------------------------
 ;;; C-x 1 でWindowを結合。もう一度実行するともとの分割にもどる.
 ;;; --------------------------------------------------------------------------------
 (require 'zoom-window)
 (global-set-key (kbd "C-x 1") 'zoom-window-zoom)
 (setq zoom-window-mode-line-color "DarkGreen")
+
+
+
+
+
+;; ------------------------------------------------------------------------
+;; @ hideshow/fold-dwim.el
+
+;; ブロックの折畳みと展開
+;; http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/fold-dwim.el
+(when (require 'fold-dwim nil t)
+  (require 'hideshow nil t)
+  ;; 機能を利用するメジャーモード一覧
+  (let ((hook))
+    (dolist (hook
+             '(emacs-lisp-mode-hook
+               c-mode-common-hook
+               python-mode-hook
+               php-mode-hook
+               ruby-mode-hook
+               js2-mode-hook
+               css-mode-hook
+               apples-mode-hook))
+      (add-hook hook 'hs-minor-mode))))
+
+;; -------------------------------------------------------------------------
+;; フレームの透明度
+;; -------------------------------------------------------------------------
+;(set-frame-parameter (selected-frame) 'alpha '(0.85))
+
+;; -------------------------------------------------------------------------
+;; SublimeTextでおなじみ。デフォルトはきってあります。 この右側に表示されたコード全体を俯瞰できるやつです。 M-x minimap-modeで有効になる。
+;; -------------------------------------------------------------------------
+(require 'minimap)
+;; (minimap-mode 1); 常に有効にする
+(setq minimap-window-location 'right); windowの位置
+(setq minimap-update-delay 0.2); 表示を更新する時間
+(setq minimap-minimum-width 20); 幅の長さ
+;; 有効にしたいモード
+;(setq minimap-major-modes '(c-mode
+;                            text-mode))
+;; 適当なキーに割り当てる
+(key-chord-define-global "ma" 'minimap-mode)
+;(global-set-key (kbd "C-x m") 'minimap-mode); toggle
+
