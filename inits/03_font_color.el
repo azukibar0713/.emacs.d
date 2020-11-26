@@ -1,6 +1,5 @@
 (load-theme 'manoj-dark t)
 
-
 ;;; P97-99 フォントの設定
 (when (eq window-system 'ns)
   ;; asciiフォントをMenloに
