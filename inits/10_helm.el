@@ -40,6 +40,7 @@
          ))
 
 (add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
 
 ; window最小化が勝つので、globalで設定してしまう.
 (global-set-key (kbd "C-z") 'helm-gtags-pop-stack)

@@ -26,8 +26,6 @@
 ;;(set-face-background 'show-paren-match-face nil)
 ;;(set-face-underline-p 'show-paren-match-face "yellow")
 
-
-
 ;;; --------------------------------------------------------------------------------
 ;;; 行末のタブ、スペースを可視化.
 ;;; --------------------------------------------------------------------------------
@@ -54,10 +52,6 @@
 (require 'zoom-window)
 (global-set-key (kbd "C-x 1") 'zoom-window-zoom)
 (setq zoom-window-mode-line-color "DarkGreen")
-
-
-
-
 
 ;; ------------------------------------------------------------------------
 ;; @ hideshow/fold-dwim.el
@@ -97,6 +91,18 @@
 ;(setq minimap-major-modes '(c-mode
 ;                            text-mode))
 ;; 適当なキーに割り当てる
-(key-chord-define-global "ma" 'minimap-mode)
+;(key-chord-define-global "ma" 'minimap-mode) ; 表示すると動作が重くなる
 ;(global-set-key (kbd "C-x m") 'minimap-mode); toggle
+
+;;; 現在の関数名をモードラインに表示
+(which-function-mode 1)
+
+;;; 現在行の強調
+(global-hl-line-mode t)
+
+(custom-set-variables
+ '(beacon-mode t)
+ '(beacon-color "LavenderBlush1")
+ '(beacon-blink-when-focused t) )
+
 
