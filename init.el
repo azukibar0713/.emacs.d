@@ -16,7 +16,7 @@
  '(beacon-mode t)
  '(package-selected-packages
    (quote
-    (multiple-cursors elpy magit minimap fold-dwim flucui-themes zoom-window undohist yasnippet open-junk-file package-utils init-loader))))
+    (company multiple-cursors elpy magit minimap fold-dwim flucui-themes zoom-window undohist yasnippet open-junk-file package-utils init-loader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
