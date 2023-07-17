@@ -11,8 +11,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(beacon-blink-when-focused t)
+ '(beacon-color "LavenderBlush1")
+ '(beacon-mode t)
  '(package-selected-packages
-   '(elpy magit minimap fold-dwim flucui-themes zoom-window undohist yasnippet open-junk-file package-utils init-loader)))
+   (quote
+    (multiple-cursors elpy magit minimap fold-dwim flucui-themes zoom-window undohist yasnippet open-junk-file package-utils init-loader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
